@@ -1,0 +1,167 @@
+/* Base Layout */
+.main {
+  background: linear-gradient(135deg, #1e1e2f, #3d0f0f);
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-bottom: 40px;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo h1 {
+  color: #f2c94c;
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* Search Bar */
+.search {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search input {
+  width: 60%;
+  height: 45px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  padding: 0 20px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.search input:focus {
+  outline: none;
+  border-color: #f2c94c;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.icon {
+  margin-left: 10px;
+  color: #fff;
+  font-size: 24px;
+}
+
+/* Movie Grid */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 20px;
+}
+
+/* Movie Card Container */
+.master {
+  flex: 1 1 300px;
+  max-width: 300px;
+}
+
+/* Movie Card */
+.first {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.first:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+}
+
+/* Poster Image */
+.image {
+  height: 200px;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.poster {
+  width: 90%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Card Details */
+.details {
+  padding: 15px;
+  text-align: center;
+}
+
+.details span {
+  font-size: 13px;
+  color: #bbb;
+}
+
+.details h3 {
+  font-size: 18px;
+  margin: 10px 0 0;
+}
+
+/* Year Text */
+.year {
+  font-size: 13px;
+  color: #999;
+  padding: 8px 15px;
+  text-align: right;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 20px;
+  }
+
+  .search input {
+    width: 90%;
+    margin-top: 10px;
+  }
+
+  .content {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .first {
+    width: 90vw;
+  }
+
+  .poster {
+    width: 100%;
+    height: auto;
+  }
+
+  .logo h1 {
+    font-size: 1.5rem;
+  }
+}
